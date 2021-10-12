@@ -129,6 +129,8 @@ body {
     right: 2rem;
     top: 2.5rem;
     display: block;
+  }
+  body.responsive{
     overflow: hidden;
   }
   .navbar{
@@ -137,11 +139,12 @@ body {
   .navbar.responsive{
     min-height: 100vh;
     height: auto;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     flex-direction: column;
+    z-index: 999999;
   }
   .nav-links{
     transition: all ease 300ms;
