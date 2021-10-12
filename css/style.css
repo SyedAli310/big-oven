@@ -152,7 +152,7 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 5rem;
-    animation: slide 500ms ease forwards 300ms;
+    animation: slide 500ms forwards 300ms;
     transition: all ease 300ms;
     transition-delay: 1s;
   }
@@ -168,6 +168,7 @@ body {
     display: none;
     width: 100%;
     margin-left: 0;
+    margin-top: 1rem;
     transition: all ease 300ms;
     transition-delay: 1s;
   }
