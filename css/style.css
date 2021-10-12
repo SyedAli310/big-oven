@@ -121,8 +121,8 @@ body {
   .hamburger{
     position: fixed;
     right: 2rem;
-    top: 50%;
-    transform: translate(0,-40%);
+    top: 2rem;
+    /* transform: translate(0,-40%); */
     display: block;
   }
   .hamburger.responsive{
