@@ -20,7 +20,7 @@ async function getData() {
   categories.forEach((category) => {
     const div = document.createElement("div");
     div.classList.add("container");
-    div.innerHTML = `<h2>${category.strCategory}</h2><img src='${category.strCategoryThumb}' /><div class='view-more'><p class='info'><u>${category.strCategory}</u></p><br><button class='view-more-btn' name="${category.strCategory}" title="${category.strCategoryDescription}">about</button>&nbsp;<button class='view-more-btn' title="Explore Category *under dev -coming soon!*" name='Oops!'>explore</button></div>`;
+    div.innerHTML = `<h2>${category.strCategory}</h2><img class='cat-img' src='${category.strCategoryThumb}' /><div class='view-more'><p class='info'><u>${category.strCategory}</u></p><br><button class='view-more-btn' name="${category.strCategory}" title="${category.strCategoryDescription}">about</button>&nbsp;<button class='view-more-btn' title="Explore Category *under dev -coming soon!*" name='Oops!'>explore</button></div>`;
     cat.appendChild(div);
   });
 }
@@ -76,6 +76,3 @@ getData().then(()=>{
 .catch(err=>{
     console.log(err);
 })
-
-
-
