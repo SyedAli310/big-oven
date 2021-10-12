@@ -69,7 +69,20 @@ body {
 #logo{
   position: relative;
   margin-top: 1rem;
+  z-index: 1;
 }
+/* #logo::before{
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  height: 100%;
+  width: 120%;
+  background-color: rgba(27, 27, 27,.75);
+  border-radius: 4px;
+  transform: rotate(-5deg) translate(-50%);
+  z-index: -1;
+} */
 
 #logo span{
   font-family: 'Ephesis', cursive;
@@ -93,17 +106,19 @@ body {
 .nav-links{
   display: flex;
   list-style-type: none;
-  margin-top: 0;
+  margin: auto 0;
 }
 .nav-links li{
   position: relative;
-  margin-left: 2rem;
+  padding: initial;
+  margin: 0 1rem;
 }
 .nav-link{
   text-decoration: none;
   color: white;
   height: 100%;
   width: 100%;
+  padding: 0.125rem 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +127,6 @@ body {
   background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
   box-shadow: 0 4px 15px 0 rgba(32, 30, 36, 0.75);
   border-radius: 4px;
-  padding: 0.125rem 0.25rem;
   cursor: pointer;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
@@ -443,7 +457,7 @@ body {
 
 
 .output{
-  min-height: 50vh;
+  min-height: 40vh;
   margin: 0px 25px;
   display: flex;
   justify-content: center;
@@ -454,8 +468,8 @@ body {
   position: relative;
   align-items: baseline !important;
   white-space: nowrap;
-  min-height: 50vh;
-  height: 50vh;
+  min-height: 40vh;
+  height: 40vh;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -475,7 +489,7 @@ body {
 
 .ingredient-span{
   margin: 10px;
-  background: #1b1b1b;
+  background: #011f17;
   color: snow;
   border-radius: 14px;
   padding: 0px 10px;
@@ -485,7 +499,7 @@ body {
 }
 .ingredient-span:hover{
   filter: brightness(1.25);
-  color: #743ad5;
+  color: #d53a9d;
 }
 .buttons{
   margin-bottom: 0.5rem;
