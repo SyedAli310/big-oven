@@ -148,17 +148,17 @@ body {
   .nav-links.responsive{
     transform: translateX(0);
     display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 5rem;
     transition: all ease 300ms;
   }
   .nav-links{
     transform: translateX(-100%);
     display: none;
     flex-direction: column;
-    align-items: stretch;
     width: 100%;
     margin-left: 0;
-    justify-content: center;
-    gap: 1rem;
   }
 }
 .nav-links li{
