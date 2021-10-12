@@ -66,6 +66,7 @@ body {
   background: -webkit-linear-gradient(#743ad5, #d53a9d);
   
 }
+
 #logo{
   position: relative;
   margin-top: 1rem;
@@ -103,10 +104,55 @@ body {
   width: 20px;
   transform: rotate(-20deg);
 }
+.hamburger{
+  display: none;
+}
+.hamburger ion-icon{
+  font-size: xx-large;
+  color: white;
+}
 .nav-links{
   display: flex;
   list-style-type: none;
   margin: auto 0;
+}
+@media (max-width:768px){
+  .hamburger{
+    position: fixed;
+    right: 2rem;
+    top: 1.25rem;
+    display: block;
+  }
+  .navbar{
+    transition: all ease 300ms;
+  }
+  .navbar.responsive{
+    min-height: 100vh;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+  }
+  .nav-links{
+    transition: all ease 300ms;
+  }
+  .nav-links.responsive{
+    transform: translateX(0);
+    display: flex;
+    transition: all ease 300ms;
+  }
+  .nav-links{
+    transform: translateX(-100%);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 .nav-links li{
   position: relative;
