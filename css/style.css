@@ -149,7 +149,7 @@ body {
     transform: translateX(0);
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
     align-items: stretch;
     gap: 5rem;
     transition: all ease 300ms;
