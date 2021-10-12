@@ -11,3 +11,7 @@ $('.hamburger').on('click',(e)=>{
         e.target.name = 'menu-outline'
     }
 })
+
+$('.login-btn').on('click',()=>{
+    netlifyIdentity.open();
+})

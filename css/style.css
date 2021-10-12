@@ -43,7 +43,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 10;
   /* background-color: rgb(245, 241, 241); */
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
@@ -54,6 +54,11 @@ body {
   align-items: center;
   margin-bottom: 2.5rem;
   padding: 0.5rem 2rem;
+}
+.modalContent{
+  position: fixed;
+  top: 0;
+  z-index: 9999999 !important;
 }
 .navbar::after{
   content:" ";
