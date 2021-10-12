@@ -144,21 +144,32 @@ body {
   }
   .nav-links{
     transition: all ease 300ms;
+    transition-delay: 1s;
   }
   .nav-links.responsive{
-    transform: translateX(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     gap: 5rem;
+    animation: slide 1s ease forwards 500ms;
     transition: all ease 300ms;
+    transition-delay: 1s;
+  }
+  @keyframes slide {
+    to{
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
   .nav-links{
     transform: translateX(-100%);
+    opacity: 0;
     display: none;
     width: 100%;
     margin-left: 0;
+    transition: all ease 300ms;
+    transition-delay: 1s;
   }
   .nav-link{
     padding: 0.75rem 0.5rem !important;
