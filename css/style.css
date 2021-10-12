@@ -55,11 +55,7 @@ body {
   margin-bottom: 2.5rem;
   padding: 0.5rem 2rem;
 }
-.modalContent{
-  position: fixed;
-  top: 0;
-  z-index: 9999999 !important;
-}
+
 .navbar::after{
   content:" ";
   position: absolute;
@@ -149,7 +145,7 @@ body {
     left: 0;
     right: 0;
     flex-direction: column;
-    z-index: 999999;
+    z-index: 10;
   }
   .nav-links{
     transition: all ease 300ms;
