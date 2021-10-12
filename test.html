@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./img/chef.png" type="image/icon type">
+
+
+    <title>Recipe &#8226; Ingredients</title>
+</head>
+<style>
+    .modal-body{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: unset !important;
+    }
+</style>
+<body>
+
+    <div class="modal-bg">
+        <button id="close-modal">X</button>
+        <div class="modal">
+            <div class="modal-header">
+                <h2></h2>
+                <hr style="background: black; margin: 0 10px;">
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header-info-div">
+        <h1 class="heading">Ingredients</h1>
+        <span id="total-ingredients"></span> 
+    </div>
+    
+    <br>
+    <div class="buttons">
+        <button class="view-all btn"><ion-icon name="eye-outline"></ion-icon> <span>view all</span></button>
+        <button class="search-btn btn"><ion-icon name="search-outline"></ion-icon> search</button>
+        <form id="ing-search-form" autocomplete="off">
+            <div class="inp-append-div">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" name="ing-search-text" id="ing-search-text" placeholder="search ingredient...">
+            </div>
+        </form>
+    </div>
+    <span id="view-all-loader"></span>
+    <div class="output not-viewed"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
