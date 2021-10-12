@@ -632,6 +632,7 @@ body {
 @media (max-width:600px){
   #ing-search-form{
     justify-content: flex-start;
+    top: 6.25rem;
   }
   .inp-append-div{
     min-width: 90%;
