@@ -152,7 +152,7 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 5rem;
-    animation: slide 1s ease forwards 500ms;
+    animation: slide 1s ease forwards 300ms;
     transition: all ease 300ms;
     transition-delay: 1s;
   }
