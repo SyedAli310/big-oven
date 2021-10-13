@@ -18,7 +18,7 @@ $('.dropdown-btn').on('click',()=>{
 })
 
 window.onclick = function(event) {
-    if (!$(event.target).is('#dropdown-btn') && !$(event.target).is('#dropdown')) {
+    if (!$(event.target).is('.dropdown-btn') && !$(event.target).is('.dropdown-menu') && !$(event.target).is('.caret-down')) {
         $('.dropdown-menu').removeClass('open')
         $('.dropdown-btn ion-icon').removeClass('open')
     }
