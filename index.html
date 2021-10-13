@@ -17,6 +17,16 @@
     .welcome-username{
         color: #743ad5;
     }
+    .searched-meal-div{
+        min-width: 25vw;
+        min-height: 20vh;
+        width: auto !important;
+        height: auto !important;
+    }
+    .searched-meal-div *{
+        margin-bottom: 0.5rem;
+    }
+
 </style>
 
 <body>
@@ -37,20 +47,29 @@
         <div class='hero'>
             <div class="hero-text-div">
                 <h1 id="welcome-msg" style="font-size: 50px;">Welcome</h1>
-                <h3>Cooking made easy.</h3>
+                <h3 style="color: #743ad5;">Cooking made easy.</h3>
                 <p>Explore through a collection of awesome recipes and filter your favoutirte by categories, quizines and even ingredients.</p>
+                <div class="hero-buttons-div">
+                    <a href="./categories.html" class="btn hero-btn">Explore Categories</a>
+                    <a href="./ingredients.html" class="btn hero-btn">Explore Ingredients</a>
+                </div>
             </div>
             <div class="hero-img-div">
                 <img class="hero-img" src="./img/hero-img-1.svg" alt="hero-img">
             </div>
         </div>
-            <div style="display: inline-block; margin: 1rem; display: flex; justify-content: center;
-            align-items: center;">
-                <a href="./categories.html" class="btn" style="margin: 1rem;">Explore Categories</a>
-                <a href="./ingredients.html" class="btn" style="margin: 1rem;">Explore Ingredients</a>
-            </div>
+        <div class="meal-of-the-day">
+            <h1>A recipe for you. 😋 </h1>
+        </div>
         <div class="global-meal-search-area">
-            <h1>Search Meals</h1>
+            <h1 class="g-meal-search-heading">Search Meals...</h1>
+            <div class="inp-append-div">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" name="main-search-text" id="main-search-text" placeholder="search recipes...">
+            </div>
+            <div class="g-meal-search-results">
+
+            </div>
         </div>
     </main>
 

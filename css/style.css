@@ -146,6 +146,9 @@ body {
     flex-direction: column;
     z-index: 10;
   }
+  #logo.responsive{
+    margin-top: 2.125rem;
+  }
   .nav-links{
     transition: all ease 300ms;
     transition-delay: 1s;
@@ -224,18 +227,27 @@ body {
 }
 
 main{
+  width: auto;
   margin: 0 2rem;
 }
 .hero{
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 2rem 0 5rem 2rem;
 }
 .hero-text-div{
-  padding: 0 2.5rem;
   text-align: start;
   flex: 50%;
+  line-height: 2;
+}
+.hero-buttons-div{
+  margin: 1rem 0;
+}
+.hero-buttons-div .hero-btn{
+  display: inline-block;
 }
 .hero-img-div{
   text-align: center;
@@ -244,12 +256,83 @@ main{
 .hero-img{
   width:50%;
 }
-.global-meal-search-area{
-  width: 100%;
-  height: auto;
-  background: #667eea;
+
+@media (max-width:800px){
+  main{
+    margin: 0;
+  }
+  .hero-buttons-div .hero-btn{
+    margin-bottom: 0.5rem;
+  }
+  .meal-of-the-day h1{
+    text-align: center;
+  }
+  .g-meal-search-heading{
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero{
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  .hero-img{
+    width:25%;
+  }
+  .hero-text-div{
+    text-align: center;
+  }
 }
 
+.meal-of-the-day{
+  min-height: 20vh;
+  width: auto;
+  margin: 2rem 2rem;
+}
+
+.global-meal-search-area{
+  margin: 2rem 2rem;
+}
+.g-meal-search-heading{
+  margin-bottom: 1rem;
+  color: #743ad5;
+}
+#main-search-text{
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  padding-left:35px;
+  padding-right:25px;
+  padding-top:0.5rem ;
+  padding-bottom:0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #1b1b1b;
+  outline: 1.5px solid snow;
+}
+
+#main-search-text:active{
+  outline: 1.5px solid #743ad5;
+}
+#main-search-text:focus{
+  outline: 1.5px solid #743ad5;
+}
+
+.g-meal-search-results{
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.searched-meal-img-2{
+  outline: 1.2px solid white;
+  border-radius: 4px;
+}
 
 .cat {
   display: flex;

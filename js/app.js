@@ -3,6 +3,7 @@ $('.hamburger').on('click',(e)=>{
     $('.navbar').toggleClass('responsive')
     $('.hamburger').toggleClass('responsive')
     $('.nav-links').toggleClass('responsive')
+    $('#logo').toggleClass('responsive')
     if($('.hamburger ion-icon').attr('name') == 'menu-outline'){
         $('.hamburger ion-icon').attr('name','close-outline')
     }
