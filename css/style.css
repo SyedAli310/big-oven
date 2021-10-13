@@ -342,7 +342,6 @@ main{
   gap: 1rem;
   margin-top: 1rem;
   padding: 2rem 0;
-  background: rgba(27, 27, 27,0.25);
   border-radius: 2px;
   transform: translateX(-100%);
   visibility: hidden;
