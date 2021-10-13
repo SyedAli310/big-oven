@@ -157,7 +157,7 @@ getAllIngredients().then((data) => {
        clearTimeout(x)
        x = setTimeout(()=>{
            searchIngredient(data,searchedText)
-        },250)
+        },500)
    })
 });
 
