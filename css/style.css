@@ -25,6 +25,29 @@ body::-webkit-scrollbar-thumb:hover {
   background: #d53a9d; 
 }
 
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .5em;
+  margin-left: 1.5em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .5em;
+  margin-right: 1.5em;
+}
+
 body {
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   background-attachment: fixed;

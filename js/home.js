@@ -21,8 +21,7 @@ async function getRandomMeal(){
         <h4>${data.meals[0].strMeal}</h4>
         <div class='toggle-btn-div'><button class='btn' id='toggle-instructions'>View Instruction</button> </div>
         <p id='recipe-instructions'>${data.meals[0].strInstructions}</p>
-        -or-
-        <hr>
+        <div class="separator">or</div>
         <div class='video-div'>
             <p>Watch a video tutorial.</p>
             <iframe width="420" height="315" src="${getEmbedUrl(data.meals[0].strYoutube)}" frameborder="0" allowfullscreen></iframe>
