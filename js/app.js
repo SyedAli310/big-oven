@@ -12,6 +12,10 @@ $('.hamburger').on('click',(e)=>{
     }
 })
 
+$('.dropdown-btn').on('click',()=>{
+    $('.dropdown-menu').toggleClass('open')
+})
+
 netlifyIdentity.on('init', user => console.log('init netlify identity'))
 
 function checkUserStatus(){
