@@ -294,12 +294,29 @@ main{
   .hero-text-div{
     text-align: center;
   }
+  iframe{
+  min-height: 65vh !important;
+  }
 }
 
 .meal-of-the-day{
   min-height: 20vh;
   width: auto;
   margin: 2rem 2rem;
+}
+
+iframe{
+  object-fit: contain;
+  border-radius: 10px !important;
+  border-radius: 100%;
+  border: solid 4px transparent;
+  background-image:linear-gradient(white, white),radial-gradient(circle at top left, #743ad5, #d53a9d);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  min-height: 75vh !important;
+  min-width: 80% !important;
+  height: auto;
+  width: auto;
 }
 
 .global-meal-search-area{
