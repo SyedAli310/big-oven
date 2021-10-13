@@ -18,7 +18,6 @@ async function getRandomMeal(){
     `
         <p id='ing-tag'>#${data.meals[0].strCategory} &nbsp;&nbsp; #${data.meals[0].strArea}</p>
         <img src='${data.meals[0].strMealThumb}' class='searched-meal-img-2' style='height:100px; width:100px;' />
-        <p style='color:#743ad5'>ID: ${data.meals[0].idMeal}</p>
         <h4>${data.meals[0].strMeal}</h4>
         <div class='toggle-btn-div'><button class='btn' id='toggle-instructions'>View Instruction</button> </div>
         <p id='recipe-instructions'>${data.meals[0].strInstructions}</p>
