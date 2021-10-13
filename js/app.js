@@ -22,12 +22,14 @@ function checkUserStatus(){
         <ion-icon name="person-circle-outline" style='font-size:larger;'></ion-icon>
         <span>&nbsp;${user.user_metadata.full_name}</span>
         `)
+        $('.welcome-msg').html(`Welcome,<span>&nbsp;${user.user_metadata.full_name}</span>`)
     }
     else{
         $('.login-btn')
         .html(`
         Join/Login
         `) 
+        $('.welcome-msg').html(`Welcome`)
     }
 }
 checkUserStatus()
