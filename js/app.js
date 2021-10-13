@@ -4,11 +4,11 @@ $('.hamburger').on('click',(e)=>{
     $('.hamburger').toggleClass('responsive')
     $('.nav-links').toggleClass('responsive')
     $('#logo').toggleClass('responsive')
-    if($('.hamburger ion-icon').attr('name') == 'menu-outline'){
+    if($('.hamburger ion-icon').attr('name') == 'apps-outline'){
         $('.hamburger ion-icon').attr('name','close-outline')
     }
     else if($('.hamburger ion-icon').attr('name') =='close-outline'){
-        $('.hamburger ion-icon').attr('name','menu-outline') 
+        $('.hamburger ion-icon').attr('name','apps-outline') 
     }
 })
 
