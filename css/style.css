@@ -483,6 +483,7 @@ iframe{
   background-color: white;
   color: #1b1b1b;
   outline: 1.5px solid snow;
+  transition: all ease 300ms;
 }
 
 #main-search-text:active{
@@ -893,13 +894,14 @@ iframe{
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  transition: all ease 200ms;
 }
 
 .btn:hover{
   filter: brightness(0.8);
 }
 .btn:active{
-  outline: 1.5px solid #d53a9d;
+  outline: 3px solid #d53a9d;
 }
 .view-all span{
   text-overflow: ellipsis;
