@@ -256,7 +256,9 @@ main{
 .hero-img{
   width:50%;
 }
-
+.welcome-username{
+  white-space: nowrap;
+}
 @media (max-width:800px){
   main{
     margin: 0 1rem;
