@@ -3,11 +3,11 @@ $('.hamburger').on('click',(e)=>{
     $('.navbar').toggleClass('responsive')
     $('.hamburger').toggleClass('responsive')
     $('.nav-links').toggleClass('responsive')
-    if(e.target.name == 'menu-outline'){
-        e.target.name = 'close-outline'
+    if($('.hamburger ion-icon').attr('name') == 'menu-outline'){
+        $('.hamburger ion-icon').attr('name','close-outline')
     }
-    else if(e.target.name=='close-outline'){
-        e.target.name = 'menu-outline'
+    else if($('.hamburger ion-icon').attr('name') =='close-outline'){
+        $('.hamburger ion-icon').attr('name','menu-outline') 
     }
 })
 
