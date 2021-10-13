@@ -11,7 +11,7 @@ $('.hamburger').on('click',(e)=>{
     }
 })
 
-netlifyIdentity.on('init', user => console.log('init', user))
+netlifyIdentity.on('init', user => console.log('init netlify identity'))
 
 function checkUserStatus(){
     const user = netlifyIdentity.currentUser();
