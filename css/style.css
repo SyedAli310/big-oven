@@ -259,7 +259,7 @@ main{
 
 @media (max-width:800px){
   main{
-    margin: 0;
+    margin: 0 1rem;
   }
   .hero-buttons-div .hero-btn{
     margin-bottom: 0.5rem;
