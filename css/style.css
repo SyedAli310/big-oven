@@ -256,6 +256,9 @@ main{
 .hero-img{
   width:50%;
 }
+#welcome-msg{
+  white-space: normal;
+}
 .welcome-username{
   white-space: nowrap;
 }
