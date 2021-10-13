@@ -154,15 +154,23 @@ body {
     transition-delay: 1s;
   }
   .nav-links.responsive{
+    position: relative;
+    width: 100%;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 5rem;
     animation: slide 500ms forwards 300ms;
     transition: all ease 300ms;
     transition-delay: 1s;
+  }
+  .nav-links li{
+    width: 100% !important;
+  }
+  .nav-link{
+    width: auto !important;
   }
   @keyframes slide {
     to{
