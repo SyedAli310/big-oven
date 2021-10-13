@@ -17,6 +17,13 @@ $('.dropdown-btn').on('click',()=>{
     $('.dropdown-btn ion-icon').toggleClass('open')
 })
 
+window.onclick = function(event) {
+    if (!$(event.target).is('#dropdown-btn') && !$(event.target).is('#dropdown')) {
+        $('.dropdown-menu').removeClass('open')
+        $('.dropdown-btn ion-icon').removeClass('open')
+    }
+ }
+
 netlifyIdentity.on('init', user => console.log('init netlify identity'))
 
 function checkUserStatus(){
