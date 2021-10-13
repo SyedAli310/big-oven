@@ -15,7 +15,7 @@ netlifyIdentity.on('init', user => console.log('init', user))
 
 function checkUserStatus(){
     const user = netlifyIdentity.currentUser();
-    console.log(user);
+    //console.log(user);
     if(user != null){
         $('.login-btn')
         .html(`
