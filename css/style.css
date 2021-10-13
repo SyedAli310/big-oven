@@ -266,7 +266,7 @@ body {
 .container:hover .view-more {
   opacity: 1;
   display: block;
-  z-index: 20 !important;
+  z-index: 5 !important;
   position: absolute;
   top: 50%;
   left: 50%;
