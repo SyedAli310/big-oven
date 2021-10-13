@@ -153,11 +153,12 @@ body {
   transform: translate(-50%,0);
   width: 20vw;
   background: #eff;
-  /* background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7); */
   border-radius: 6px;
   padding: 1rem 0.5rem;
-  /* overflow: hidden; */
   transform: translate(-50%,-25%);
+  border-left: 3px inset #743ad5;
+  border-right: 3px inset #d53a9d;
+  border-bottom: 3px inset #a6c1ee;
   visibility: hidden;
   opacity: 0;
   display: none;
