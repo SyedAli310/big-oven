@@ -222,15 +222,33 @@ body {
   outline: 2px solid #743ad5;
 
 }
-/* .logout-btn{
-  background: salmon;
-  background-color: salmon;
-  color: #fff;
+
+main{
+  margin: 0 2rem;
 }
-.logout-btn:hover{
-  box-shadow: 4px 8px 20px rgba(52, 35, 75, 0.75);
-  outline: 2px solid crimson;
-} */
+.hero{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero-text-div{
+  padding: 0 2.5rem;
+  text-align: start;
+  flex: 50%;
+}
+.hero-img-div{
+  text-align: center;
+  flex: 50%;
+}
+.hero-img{
+  width:50%;
+}
+.global-meal-search-area{
+  width: 100%;
+  height: auto;
+  background: #667eea;
+}
 
 
 .cat {

@@ -32,6 +32,7 @@ function checkUserStatus(){
         $('#welcome-msg').html(`Welcome`)
     }
 }
+
 checkUserStatus()
 
 $('.login-btn').on('click',()=>{
