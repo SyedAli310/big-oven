@@ -13,6 +13,9 @@ $('.hamburger').on('click',(e)=>{
 })
 
 $('.dropdown-btn').on('click',()=>{
+    // $('.dropdown-menu').toggleClass('open')
+    // $('.dropdown-menu').css('display',"block")
+    // $('.dropdown-menu').css("visibility","visible")
     $('.dropdown-menu').toggleClass('open')
 })
 

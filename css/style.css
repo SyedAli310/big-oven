@@ -140,6 +140,7 @@ body {
   list-style-type: none;
   margin: auto 0;
 }
+
 .dropdown-btn{
   position: relative;
 }
@@ -155,15 +156,26 @@ body {
   outline: 1.5px solid #fff;
   padding: 1rem;
   overflow: hidden;
-  transform: translate(-50%,-100%);
+  transform: translate(-50%,-25%);
   visibility: hidden;
+  opacity: 0;
   display: none;
   transition: all ease 300ms;
 }
 .dropdown-menu.open{
-  transform: translate(-50%,0);
-  visibility: visible;
+  animation:  dropdown 0.5s ease forwards;
   display: block;
+  visibility: visible;
+}
+@keyframes dropdown{
+  from{
+    opacity: 0;
+    transform: translate(-50%,-25%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(-50%,0);
+  }
 }
 .dropdown-menu ul{
   list-style-type: none;
@@ -202,6 +214,9 @@ body {
 }
 
 @media (max-width:768px){
+  .dropdown-menu{
+    width: 100%;
+  }
   .hamburger{
     position: fixed;
     right: 2rem;
