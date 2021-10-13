@@ -230,7 +230,8 @@ body {
 }
 
 .dropdown-menu ul li a:hover::before{
-  color: #fff;
+  color: #1b1b1b;
+  left: 0.25rem;
   transform: translateX(0);
 }
 
