@@ -404,6 +404,9 @@ main{
 .welcome-username{
   white-space: nowrap;
 }
+.meal-of-the-day h1{
+  margin-bottom: 1.5rem;
+}
 @media (max-width:800px){
   main{
     margin: 0 1rem;
