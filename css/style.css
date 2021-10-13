@@ -354,6 +354,16 @@ main{
   border-radius: 4px;
 }
 
+#recipe-instructions{
+  overflow: hidden;
+  height: 0;
+  transition: all ease 300ms;
+}
+#recipe-instructions.toggle-view{
+  overflow:visible;
+  height: auto;
+}
+
 .cat {
   display: flex;
   justify-content: center;

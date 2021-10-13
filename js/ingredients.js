@@ -41,7 +41,10 @@ async function getRecipeByIngredient(ingredient) {
       modalBody.append(searchedMeal);
     });
     showModal(
-      `<span style='color:#1b1b1b;'>${length}</span> Recipe(s) include <span style='color:#1b1b1b;'>${ingredient}</span>`
+      `<span style='color:#1b1b1b;'>${length}</span> Recipe(s) include <span style='color:#1b1b1b;'>${ingredient}</span>
+       <img src='https://www.themealdb.com/images/ingredients/${ingredient}.png' 
+        style='height:50px' width:50px; border-radius:100%; />
+      `
     );
   } else {
     modalBody.innerHTML = `<h2 style='color:crimson; text-align:center;'>No recipies found for <i style='color:#743ad5'>'${ingredient}'</i><br><p style='font-size:small; font-weight:light; color:grey;'>Only the main ingredients are listed here, <i style='color:#743ad5'; font-size:larger; !important>'${ingredient}'</i> might still be a secondary ingredient for several recipies.</p></h2>`;
@@ -65,12 +68,15 @@ function showModal(head) {
   });
 }
 
+
+
 function showIngredients(data){
     output.innerHTML = "";
+    const fallbackImg = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-SKSRQBe0jiXkAO6FIAvUdpGKXcztiPMU9Q&usqp=CAU`;
     data.forEach((el) => {
         const ingredient = document.createElement("span");
         ingredient.classList.add("ingredient-span");
-        ingredient.innerHTML = `<a class='ing-links' >${el.strIngredient}</a>`;
+        ingredient.innerHTML = `<a class='ing-links'>${el.strIngredient}</a>`;
         output.append(ingredient);
       });
 }
