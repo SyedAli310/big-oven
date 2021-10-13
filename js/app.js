@@ -11,6 +11,39 @@ $('.hamburger').on('click',(e)=>{
     }
 })
 
+netlifyIdentity.on('init', user => console.log('init', user))
+
+function checkUserStatus(){
+    const user = netlifyIdentity.currentUser();
+    console.log(user);
+    if(user != null){
+        $('.login-btn')
+        .html(`
+        <ion-icon name="person-circle-outline" style='font-size:larger;'></ion-icon>
+        <span>&nbsp;${user.user_metadata.full_name}</span>
+        `)
+    }
+    else{
+        $('.login-btn')
+        .html(`
+        Join/Login
+        `) 
+    }
+}
+checkUserStatus()
+
 $('.login-btn').on('click',()=>{
     netlifyIdentity.open();
-})
+});
+
+netlifyIdentity.on('login', user => {
+    netlifyIdentity.close();
+    checkUserStatus()
+});
+
+netlifyIdentity.on('logout', () => {
+    netlifyIdentity.close();
+    checkUserStatus()
+});
+
+

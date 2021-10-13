@@ -221,6 +221,15 @@ body {
   box-shadow: 4px 8px 20px rgba(52, 35, 75, 0.75);
   outline: 2px solid #743ad5;
 }
+/* .logout-btn{
+  background: salmon;
+  background-color: salmon;
+  color: #fff;
+}
+.logout-btn:hover{
+  box-shadow: 4px 8px 20px rgba(52, 35, 75, 0.75);
+  outline: 2px solid crimson;
+} */
 
 
 .cat {
