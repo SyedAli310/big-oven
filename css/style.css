@@ -593,6 +593,7 @@ body {
   align-items: center;
   gap: 0.25rem;
 }
+
 .btn:hover{
   filter: brightness(0.8);
 }
@@ -604,6 +605,7 @@ body {
   white-space:nowrap;
   overflow: hidden;
 }
+
 #ing-search-form{
   display: none;
   transform: translateY(-100%);
@@ -622,6 +624,7 @@ body {
   display: flex !important;
   transform: translateY(0) !important;
 }
+
 .inp-append-div{
   display: flex;
   position: relative;
@@ -629,7 +632,22 @@ body {
   width: auto;
   height: auto;
 }
+#close-search-bar{
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 99%;
+  background: #743ad5;
+  font-size: larger;
+  padding: 0.125rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 @media (max-width:600px){
+  #close-search-bar{
+    left: 97%;
+  }
   #ing-search-form{
     justify-content: flex-start;
     top: 6.25rem;
@@ -651,6 +669,7 @@ body {
   width: 100%;
   height: 100%;
   padding-left:35px;
+  padding-right:25px;
   padding-top:0.5rem ;
   padding-bottom:0.5rem;
   outline: none;

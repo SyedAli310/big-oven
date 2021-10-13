@@ -160,5 +160,10 @@ $('.search-btn').on('click',(e)=>{
     // $('#ing-search-form').css({transform:'translateY(0)'})
     $('#ing-search-form').toggleClass('search-hide')
     $('#ing-search-text').select()
-
+})
+$('#close-search-bar').on('click',(e)=>{
+    // $('#ing-search-form').css('display','flex')
+    // $('#ing-search-form').css({transform:'translateY(0)'})
+    $('#ing-search-form').toggleClass('search-hide')
+    
 })

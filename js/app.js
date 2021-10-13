@@ -1,4 +1,3 @@
-let x = null
 $('.hamburger').on('click',(e)=>{
     $('body').toggleClass('responsive')
     $('.navbar').toggleClass('responsive')
