@@ -341,7 +341,15 @@ main{
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  padding: 2rem 0;
+  background: rgba(27, 27, 27,0.25);
+  border-radius: 2px;
+  transform: translateX(-100%);
+  visibility: hidden;
+  display: none;
+  transition: all ease 300ms;
 }
+
 .searched-meal-img-2{
   outline: 1.2px solid white;
   border-radius: 4px;
