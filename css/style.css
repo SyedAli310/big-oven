@@ -144,7 +144,12 @@ body {
 .dropdown-btn{
   position: relative;
 }
-
+.dropdown-btn ion-icon{
+  transition: transform ease 300ms;
+}
+.dropdown-btn ion-icon.open{
+  transform: rotate(180deg);
+}
 .dropdown-menu{
   z-index: 15;
   position: absolute;
@@ -377,7 +382,13 @@ main{
   margin: 1rem 0;
 }
 .hero-buttons-div .hero-btn{
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.hero-buttons-div .hero-btn ion-icon{
+  font-size: x-large;
 }
 .hero-img-div{
   text-align: center;
