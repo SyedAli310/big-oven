@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 
 body,*{
   margin: 0;
@@ -110,7 +110,7 @@ body {
 } */
 
 #logo span{
-  font-family: 'Ephesis', cursive;
+  font-family: 'ZCOOL KuaiLe', cursive;
   background: -webkit-linear-gradient(#743ad5, #d53a9d);
   -webkit-background-clip: text;
   background-clip: text;
@@ -122,11 +122,12 @@ body {
 
 #logo img{
   position: absolute;
-  left: 0;
+  left: -0.25rem;
   top: -0.75rem;
   height: 20px;
   width: 20px;
   transform: rotate(-20deg);
+  z-index: -1;
 }
 .hamburger{
   display: none;
