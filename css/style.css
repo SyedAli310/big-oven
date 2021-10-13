@@ -916,7 +916,7 @@ iframe{
   background-color: transparent;
   border-radius: 0px 0px 4px 4px;
   padding: 1rem;
-  z-index: 100;
+  z-index: 5;
 }
 .search-hide{
   display: flex !important;
