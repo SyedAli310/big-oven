@@ -19,7 +19,7 @@ Open [index.html](https://github.com/SyedAli310/big-oven/blob/main/index.html) i
 
 ## Deployed Link
 
-#### [Pop Game](https://big-oven.netlify.app/) - `https://big-oven.netlify.app/` ↗️
+#### [Big Oven](https://big-oven.netlify.app/) - `https://big-oven.netlify.app/` ↗️
 
 ## Authors
 
