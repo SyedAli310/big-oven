@@ -1,4 +1,4 @@
-# big-oven
+# Big Oven
 A hub for all the recipes you'll ever need. No more confusion for weekend cooking sessions.
 
 ## Run Locally
