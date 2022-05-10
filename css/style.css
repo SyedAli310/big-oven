@@ -1092,7 +1092,7 @@ iframe {
 }
 
 .meal-info-wrapper .vertical-line {
-  width: 2px;
+  width: 1px;
   height: 100%;
   background-color: #1b1b1b;
   /* display: block; */
