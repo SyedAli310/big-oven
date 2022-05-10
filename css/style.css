@@ -1100,16 +1100,17 @@ iframe {
 .meal-card {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   /* border: 1px solid red; */
+  flex-wrap: wrap;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #1b1b1b;
 }
 
 .meal-card .meal-info {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1117,9 +1118,18 @@ iframe {
   gap: 0.5rem;
 }
 .meal-card .meal-info h4 {
+  text-align: start;
   font-size: x-large;
   font-weight: bold;
   color: #743ad5;
+}
+.meal-card .meal-info .recipe-tags {
+  font-size: small;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.25rem;
+  flex-wrap: wrap;
 }
 .recipe-tags > span {
   background: #1b1b1b;
