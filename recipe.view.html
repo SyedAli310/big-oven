@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="icon" href="./img/chef.png" type="image/icon type" />
+
+    <title>BigOven &#8226; Home</title>
+  </head>
+
+  <style>
+    .recipe-viewer {
+      margin-top: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <nav class="navbar">
+      <div id="logo">
+        <a href="/" style="text-decoration: none"
+          >&nbsp;<span>BigOven</span><img src="./img/chef.png" alt="Big Oven"
+        /></a>
+      </div>
+      <div class="hamburger"><ion-icon name="apps-outline"></ion-icon></div>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li>
+          <a href="javascript:void(0);" class="nav-link dropdown-btn"
+            >Explore
+            <ion-icon name="caret-down-outline" class="caret-down"></ion-icon
+          ></a>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="./categories.html"
+                  ><ion-icon name="copy-outline"></ion-icon>
+                  &nbsp;&nbsp;Categories</a
+                >
+              </li>
+              <li>
+                <a href="./ingredients.html"
+                  ><ion-icon name="restaurant-outline"></ion-icon>
+                  &nbsp;&nbsp;Ingredients</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><ion-icon name="earth-outline"></ion-icon>
+                  &nbsp;&nbsp;Quizines</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#" class="nav-link">Feedback</a></li>
+        <li>
+          <a href="javascript:void(0);" class="login-btn nav-link"
+            >Join/Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- <h1 style="text-align: center; margin-block: 1.5rem">Recipe View</h1> -->
+      <div id="recipe-view-wrapper" class="recipe-viewer"></div>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/recipe.view.js"></script>
+  </body>
+</html>

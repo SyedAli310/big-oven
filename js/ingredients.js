@@ -19,7 +19,7 @@ async function getAllIngredients() {
 }
 
 async function getRecipeByIngredient(ingredient) {
-    console.log('inside modal getter');
+  console.log("inside modal getter");
   const modalBody = document.querySelector(".modal-body");
   modalBody.innerHTML = "";
   const res = await fetch(
@@ -33,10 +33,11 @@ async function getRecipeByIngredient(ingredient) {
       const searchedMeal = document.createElement("div");
       searchedMeal.classList.add("searched-meal-div");
       searchedMeal.innerHTML = `
-            <p id='ing-tag'>#${ingredient}</p>
-            <img src='${el.strMealThumb}' class='searched-meal-img' style='height:100px; width:100px;' />
-            <h4>${el.strMeal}</h4>
-            <p style='color:#743ad5'>ID: ${el.idMeal}</p>
+            <a href='/recipe.view.html?id=${el.idMeal}' target='_blank'>
+              <p id='ing-tag'>#${ingredient}</p>
+              <img src='${el.strMealThumb}' class='searched-meal-img' style='height:100px; width:100px;' />
+              <h4>${el.strMeal}</h4>
+            </a>
             `;
       modalBody.append(searchedMeal);
     });
@@ -68,55 +69,51 @@ function showModal(head) {
   });
 }
 
-
-
-function showIngredients(data){
-    output.innerHTML = "";
-    const fallbackImg = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-SKSRQBe0jiXkAO6FIAvUdpGKXcztiPMU9Q&usqp=CAU`;
-    data.forEach((el) => {
-        const ingredient = document.createElement("span");
-        ingredient.classList.add("ingredient-span");
-        ingredient.innerHTML = `<a class='ing-links'>${el.strIngredient}</a>`;
-        output.append(ingredient);
-      });
+function showIngredients(data) {
+  output.innerHTML = "";
+  const fallbackImg = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-SKSRQBe0jiXkAO6FIAvUdpGKXcztiPMU9Q&usqp=CAU`;
+  data.forEach((el) => {
+    const ingredient = document.createElement("span");
+    ingredient.classList.add("ingredient-span");
+    ingredient.innerHTML = `<a class='ing-links'>${el.strIngredient}</a>`;
+    output.append(ingredient);
+  });
 }
 
-function searchIngredient(data,searchedText){
-    $(".output").removeClass("not-viewed");
-    $(".view-all span").text("view less");
+function searchIngredient(data, searchedText) {
+  $(".output").removeClass("not-viewed");
+  $(".view-all span").text("view less");
 
-    
-    let searchRes = []
-    data.forEach(value =>{
-        //console.log(value);
-        if(value.strIngredient.toLowerCase().match(searchedText)){
-            searchRes.push(value)
-        }
-        output.innerHTML = loadingMsg;
-    })
-    if(searchRes.length == 0){
-        searchRes.push({strIngredient:'No results found!'})
+  let searchRes = [];
+  data.forEach((value) => {
+    //console.log(value);
+    if (value.strIngredient.toLowerCase().match(searchedText)) {
+      searchRes.push(value);
     }
-    setTimeout(()=>{
-        console.log(searchRes);
-        showIngredients(searchRes)
-        clickEventBinder()
-    },1000)
-    
+    output.innerHTML = loadingMsg;
+  });
+  if (searchRes.length == 0) {
+    searchRes.push({ strIngredient: "No results found!" });
+  }
+  setTimeout(() => {
+    console.log(searchRes);
+    showIngredients(searchRes);
+    clickEventBinder();
+  }, 1000);
 }
 
 function clickEventBinder() {
-    $(".ing-links").on("click", (e) => {
-        //console.log(e.target.text);
-        getRecipeByIngredient(e.target.text);
-      });
+  $(".ing-links").on("click", (e) => {
+    //console.log(e.target.text);
+    getRecipeByIngredient(e.target.text);
+  });
 }
 
 getAllIngredients().then((data) => {
   $("#total-ingredients").text(`Total: ${data.length}`);
 
-  showIngredients(data) 
-  clickEventBinder()
+  showIngredients(data);
+  clickEventBinder();
 
   $(".view-all").on("click", (e) => {
     $("#view-all-loader").html(loadingMsg);
@@ -139,37 +136,35 @@ getAllIngredients().then((data) => {
     }, 2000);
   });
 
-  
   //search functionality
   $("#ing-search-form").on("submit", (e) => {
-      e.preventDefault();
-      let searchedText = $('#ing-search-text').val()
-      searchedText = searchedText.toLowerCase()
-      console.log(searchedText)
-      searchIngredient(data,searchedText)
-    });
+    e.preventDefault();
+    let searchedText = $("#ing-search-text").val();
+    searchedText = searchedText.toLowerCase();
+    console.log(searchedText);
+    searchIngredient(data, searchedText);
+  });
 
-    let x = null
-   $("#ing-search-text").keyup((e)=>{
-       let searchedText = $(e.target).val()
-       searchedText = searchedText.toLowerCase()
-       console.log(searchedText)
-       clearTimeout(x)
-       x = setTimeout(()=>{
-           searchIngredient(data,searchedText)
-        },500)
-   })
+  let x = null;
+  $("#ing-search-text").keyup((e) => {
+    let searchedText = $(e.target).val();
+    searchedText = searchedText.toLowerCase();
+    console.log(searchedText);
+    clearTimeout(x);
+    x = setTimeout(() => {
+      searchIngredient(data, searchedText);
+    }, 500);
+  });
 });
 
-$('.search-btn').on('click',(e)=>{
-    // $('#ing-search-form').css('display','flex')
-    // $('#ing-search-form').css({transform:'translateY(0)'})
-    $('#ing-search-form').toggleClass('search-hide')
-    $('#ing-search-text').select()
-})
-$('#close-search-bar').on('click',(e)=>{
-    // $('#ing-search-form').css('display','flex')
-    // $('#ing-search-form').css({transform:'translateY(0)'})
-    $('#ing-search-form').toggleClass('search-hide')
-    
-})
+$(".search-btn").on("click", (e) => {
+  // $('#ing-search-form').css('display','flex')
+  // $('#ing-search-form').css({transform:'translateY(0)'})
+  $("#ing-search-form").toggleClass("search-hide");
+  $("#ing-search-text").select();
+});
+$("#close-search-bar").on("click", (e) => {
+  // $('#ing-search-form').css('display','flex')
+  // $('#ing-search-form').css({transform:'translateY(0)'})
+  $("#ing-search-form").toggleClass("search-hide");
+});
